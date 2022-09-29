@@ -1,0 +1,47 @@
+body {
+  padding-top: 200px;
+  margin: 20px; }
+
+p {
+  width: 20px;
+  padding-top: 30px;
+  width: calc(100% - 30px); }
+
+.olive {
+  color: olive; }
+
+ul {
+  margin: 0px;
+  display: block;
+  animation: menu 1s; }
+  ul:hover {
+    color: blue; }
+  ul::before {
+    content: "Trial version - "; }
+  @media screen and (min-width: 300px) {
+    ul {
+      display: flex; } }
+
+@keyframes menu {
+  to {
+    color: red; } }
+
+.menu {
+  display: block;
+  font-size: 1em;
+  font-style: italic;
+  font-family: arial;
+  grid-template-columns: 28px 41px;
+  grid-template-rows: auto; }
+  .menu-item {
+    color: aqua;
+    background-color: string;
+    background-color: "hithere";
+    background-color: hithere;
+    background-color: "hithere";
+    background-color: number;
+    background-color: number;
+    background-color: color;
+    background-color: list;
+    background-color: map;
+    background-color: arial; }

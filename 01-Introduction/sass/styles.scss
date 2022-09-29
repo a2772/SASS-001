@@ -1,0 +1,80 @@
+@import "config";
+@import "extra";
+//Importing from other scss file and using _ to ignore its compilation in a new file
+
+p{
+    $size: 30px;
+    width: $width;
+    padding-top: $size;
+    width: calc(100% - #{$size})
+}
+
+.#{$color}{
+    color: $color;
+}
+
+ul{
+    margin: 0px;
+    display: block;
+    animation: menu 1s;
+
+    &:hover{
+        color: blue;
+    }
+    &::before{
+        content: "Trial version - ";
+    }
+    
+    @media screen and (min-width: 300px) {
+        display: flex;
+    }
+
+    @keyframes menu {
+        to{
+            color: red;
+        }
+    }
+}
+
+.menu{
+    display: block;
+
+    &-item{
+        $value: hithere;
+        $valueOne: "hithere";
+        $valueTwo: hithere;
+        $valueThree: 1s;
+        $valueFour: 1px;
+        $valueFive: #FFF;
+        $valueSix: #FFF 1px;
+        $valueSeven: (
+            color: black,
+            font: arial 
+        );
+        $valueEight: #FFF;
+        color: aqua;
+        background-color: type-of($value);
+        background-color: $valueOne;
+        background-color: unquote($valueOne);
+        background-color: quote($valueTwo);
+        background-color: type-of($valueThree);
+        background-color: type-of($valueFour);
+        background-color: type-of($valueFive);
+        background-color: type-of($valueSix);
+        background-color: type-of($valueSeven);
+        background-color: map-get($valueSeven, font);
+    }
+    font: {
+        //Nests font and concats with size, style and family
+        size: 1em;
+        style: italic;
+        family: arial;
+    }
+    grid-template: {
+        columns: 28px 41px;
+        rows: auto;
+    }
+}
+
+//Data types in SASS
+// String, number, colors, booleans, maps, lists
